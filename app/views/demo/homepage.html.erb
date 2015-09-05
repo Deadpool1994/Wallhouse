@@ -1,0 +1,17 @@
+<h1>Demo#homepage</h1>
+<p>Find me in app/views/demo/homepage.html.erb</p>
+
+<% if !user_signed_in? %>
+
+ <%= link_to "Log in", new_user_session_path %>
+ <%= link_to "Sign in", new_user_registration_path %>
+
+<% else %>
+
+ <%= image_tag @user.avatar.url %>
+ <h1> <%= @user.email %> </h1>
+  <h1> <%= "kjfiojfiojfi" %> </h1>
+  <h1> <%= @user.profile_name%> </h1>
+
+ <%= link_to "log out", destroy_user_session_path, method: :delete %>
+ <% end %>
