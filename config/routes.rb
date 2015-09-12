@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'experiment/index'
+
   devise_for :users
   get 'demo/homepage'
+
   get 'users/sign_out' => 'demo#homepage'
 
   root 'demo#homepage'
